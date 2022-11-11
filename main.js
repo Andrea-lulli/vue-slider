@@ -27,57 +27,78 @@ var app = new Vue(
     },
 
 
-    methods: {
 
 
-      //ANCHOR - freccia sx camcio immagine
-      cambioImg: function () {
+methods: {
 
-        this.index++;
 
-        if (this.index > 4) {
-          this.index = 0;
+  //ANCHOR - freccia sx camcio immagine
+  cambioImg: function () {
+
+    this.index++;
+
+
+    if (this.index > 4) {
+      this.index = 0;
+    }
+
+  },
+
+  //FIXME - freccia dx cambio immagine
+  cambioImgN: function () {
+
+    this.index--;
+
+    if (this.index < 0) {
+      this.index = 4;
+    }
+  },
+
+
+  // SECTION bottoni cambio immagine
+  cambioImg0: function () {
+    this.index = 0
+    this.bgcolor = "bg-dark"
+
+  },
+
+  cambioImg1: function () {
+    this.index = 1
+    this.bgcolor1 = "bg-dark"
+  },
+
+  cambioImg2: function () {
+    this.index = 2
+    this.bgcolor2 = "bg-dark"
+  },
+
+  cambioImg3: function () {
+    this.index = 3
+    this.bgcolor3 = "bg-dark"
+  },
+
+  cambioImg4: function () {
+    this.index = 4
+    this.bgcolor4 = "bg-dark"
+  },
+
+  //REVIEW - funzione per far scorrere img in automatico ogni 3 sec
+   callFunction: function () {
+    var v = this;
+   let my = setInterval (function () {
+        v.index++;
+        if (v.index > 4) {
+          v.index = 0;
         }
-
-      },
-
-      //FIXME - freccia dx cambio immagine
-      cambioImgN: function () {
-
-        this.index--;
-
-        if (this.index < 0) {
-          this.index = 4;
-        }
-      },
-
-
-      // SECTION bottoni cambio immagine
-      cambioImg0: function () {
-         this.index = 0
-         this.bgcolor = "bg-dark"
         
-      },
+    }, 3000)
+  },
+},
 
-      cambioImg1: function () {
-        this.index = 1
-        this.bgcolor1 = "bg-dark"
-      },
 
-      cambioImg2: function () {
-        this.index = 2
-        this.bgcolor2 = "bg-dark"
-      },
 
-      cambioImg3: function () {
-        this.index = 3
-        this.bgcolor3 = "bg-dark"
-      },
+mounted() {
+  this.callFunction()
+}
 
-      cambioImg4: function () {
-        this.index = 4
-        this.bgcolor4 = "bg-dark"
-      },
-    },
-
-  })
+})
