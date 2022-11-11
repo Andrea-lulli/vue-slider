@@ -19,11 +19,11 @@ var app = new Vue(
       img: ["https://picsum.photos/id/237/200/300", "https://picsum.photos/seed/picsum/200/300", "https://picsum.photos/200/300?grayscale", "https://picsum.photos/200/300/?blur", "https://picsum.photos/200/300.jpg"],
       index: 0,
 
-
-
-
     },
     methods: {
+
+
+      //ANCHOR - freccia sx camcio immagine
       cambioImg: function () {
 
         this.index++;
@@ -34,6 +34,7 @@ var app = new Vue(
 
       },
 
+      //FIXME - freccia dx cambio immagine
       cambioImgN: function () {
 
         this.index--;
@@ -41,6 +42,28 @@ var app = new Vue(
         if (this.index < 0) {
           this.index = 4;
         }
+      },
+
+
+      // SECTION bottoni cambio immagine
+      cambioImg0: function () {
+        this.index = 0
+      },
+
+      cambioImg1: function () {
+        this.index = 1
+      },
+
+      cambioImg2: function () {
+        this.index = 2
+      },
+
+      cambioImg3: function () {
+        this.index = 3
+      },
+
+      cambioImg4: function () {
+        this.index = 4
       },
     },
 

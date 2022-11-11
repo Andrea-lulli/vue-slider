@@ -20,18 +20,37 @@
 <body>
     <div id="root">
         <div class="row text-center align-items-center">
+
+            <!-- freccia laterale six -->
             <div class="col-4 ">
                 <i class="fa-solid fa-arrow-left-long fs-1 " @click="cambioImgN"></i>
-
             </div>
+
+            <!-- immagini -->
             <div class="col-4 card">
                 <img :src="img[ index ]" alt="">
             </div>
 
+            <!-- freccia laterale dx -->
             <div class="col-4">
                 <i class=" fa-solid fa-arrow-right-long fs-1" @click="cambioImg"></i>
-
             </div>
+
+
+            <!-- bottoni per cambio immagine -->
+            <div>
+                <button type="button" data-bs-target="#carouselExampleIndicators" @click="cambioImg0"
+                    data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" @click="cambioImg1"
+                    data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" @click="cambioImg2"
+                    data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" @click="cambioImg3"
+                    data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" @click="cambioImg4"
+                    data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
         </div>
     </div>
 
