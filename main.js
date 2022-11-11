@@ -83,16 +83,16 @@ methods: {
   },
 
   //REVIEW - funzione per far scorrere img in automatico ogni 3 sec
-   callFunction: function () {
-    var v = this;
-   let my = setInterval (function () {
-        v.index++;
-        if (v.index > 4) {
-          v.index = 0;
-        }
+  //  callFunction: function () {
+  //   var v = this;
+  //  let my = setInterval (function () {
+  //       v.index++;
+  //       if (v.index > 4) {
+  //         v.index = 0;
+  //       }
         
-    }, 3000)
-  },
+  //   }, 3000)
+  // },
 },
 
 
