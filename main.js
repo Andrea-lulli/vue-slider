@@ -13,20 +13,35 @@ a ogni 3 sec l'immagine cambia automaticamente senza nessun click
 var app = new Vue(
   {
     el: '#root',
-    
+
     data: {
-     
+
+      img: ["https://picsum.photos/id/237/200/300", "https://picsum.photos/seed/picsum/200/300", "https://picsum.photos/200/300?grayscale", "https://picsum.photos/200/300/?blur", "https://picsum.photos/200/300.jpg"],
+      index: 0,
 
 
 
 
     },
     methods: {
+      cambioImg: function () {
 
-      
+        this.index++;
 
-      }
+        if (this.index > 4) {
+          this.index = 0;
+        }
 
+      },
+
+      cambioImgN: function () {
+
+        this.index--;
+
+        if (this.index < 0) {
+          this.index = 4;
+        }
+      },
     },
 
   })
