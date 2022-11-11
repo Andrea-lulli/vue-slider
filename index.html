@@ -19,7 +19,7 @@
 
 <body>
     <div id="root">
-        <div class="row text-center align-items-center">
+        <div class="row text-center align-items-center conteiner">
 
             <!-- freccia laterale six -->
             <div class="col-4 ">
@@ -38,16 +38,16 @@
 
 
             <!-- bottoni per cambio immagine -->
-            <div>
+            <div class="col-12">
                 <button type="button" data-bs-target="#carouselExampleIndicators" @click="cambioImg0"
-                    data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" @click="cambioImg1"
+                    data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" :class="bgcolor"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" @click="cambioImg1" :class="bgcolor1"
                     data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" @click="cambioImg2"
+                <button type="button" data-bs-target="#carouselExampleIndicators" @click="cambioImg2" :class="bgcolor2"
                     data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" @click="cambioImg3"
+                <button type="button" data-bs-target="#carouselExampleIndicators" @click="cambioImg3" :class="bgcolor3"
                     data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" @click="cambioImg4"
+                <button type="button" data-bs-target="#carouselExampleIndicators" @click="cambioImg4" :class="bgcolor4"
                     data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
 

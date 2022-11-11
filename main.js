@@ -18,8 +18,15 @@ var app = new Vue(
 
       img: ["https://picsum.photos/id/237/200/300", "https://picsum.photos/seed/picsum/200/300", "https://picsum.photos/200/300?grayscale", "https://picsum.photos/200/300/?blur", "https://picsum.photos/200/300.jpg"],
       index: 0,
+      bgcolor: "",
+      bgcolor1: "",
+      bgcolor2: "",
+      bgcolor3: "",
+      bgcolor4: "",
 
     },
+
+
     methods: {
 
 
@@ -47,23 +54,29 @@ var app = new Vue(
 
       // SECTION bottoni cambio immagine
       cambioImg0: function () {
-        this.index = 0
+         this.index = 0
+         this.bgcolor = "bg-dark"
+        
       },
 
       cambioImg1: function () {
         this.index = 1
+        this.bgcolor1 = "bg-dark"
       },
 
       cambioImg2: function () {
         this.index = 2
+        this.bgcolor2 = "bg-dark"
       },
 
       cambioImg3: function () {
         this.index = 3
+        this.bgcolor3 = "bg-dark"
       },
 
       cambioImg4: function () {
         this.index = 4
+        this.bgcolor4 = "bg-dark"
       },
     },
 
